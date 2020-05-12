@@ -15,10 +15,10 @@ public class Folder {
     @Column
     private String title;
 
-    @OneToMany(mappedBy = "folder")
+    @ManyToOne
     private List<File> files;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "user_id")
     private User user;
 
